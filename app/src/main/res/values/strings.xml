@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Waralobby</string>
+    <string name="imgsignup">Image SignUp</string>
+    <string name="imgsignin">Image Signin</string>
+    <string name="signin_tv">LOGIN</string>
+    <string name="signup_tv">Sign Up</string>
+    <string name="invalidemailformat">Invalid Email, Please Check Again!</string>
+    <string name="minimal_legth">Minimal Length %1$d Characters</string>
+    <string name="email_sign">Input Your Email Here</string>
+    <string name="pass_sign">Input Your Password Here</string>
+    <string name="avatar">Avatar</string>
+    <string name="review">What do you think about this Franchise?</string>
+    <string name="franchise_desc">Franchise Desc</string>
+    <string name="franchise_name">Franchise Name</string>
+    <string name="franchise_cost">Franchise Cost</string>
+    <string name="txt_tags">Franchise Tags</string>
+    <string name="tanggal">Tanggal Berdiri</string>
+    <string name="imgFranchisors">Image/Logo</string>
+    <string name="locationtxt">Franchise Location</string>
+    <string name="reviewbutton">SEND</string>
+    <string name="kontaktextview">Kontak</string>
+    <string name="emailtextview">Email</string>
+    <string name="loc">Lokasi</string>
+</resources>

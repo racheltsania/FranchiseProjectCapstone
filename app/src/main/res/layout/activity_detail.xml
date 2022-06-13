@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".detail.DetailActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/imgAvatar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/avatar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@tools:sample/avatars" />
+
+
+            <TextView
+                android:id="@+id/franchisorsCost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/franchise_cost"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@color/maroon"
+                app:layout_constraintEnd_toEndOf="@+id/imgAvatar"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/imgAvatar"
+                app:layout_constraintTop_toBottomOf="@+id/imgAvatar" />
+
+
+            <TextView
+                android:id="@+id/franchisorsname_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/franchise_name"
+                android:textSize="20sp"
+                android:textColor="@color/maroon"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/franchisorsCost"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/franchisorsCost"
+                app:layout_constraintTop_toBottomOf="@+id/franchisorsCost" />
+
+            <TextView
+                android:id="@+id/franchise_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:scrollbars="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/franchisorsname_txt"
+                app:layout_constraintTop_toBottomOf="@+id/franchisorsname_txt"
+                tools:text="Description" />
+
+            <TextView
+                android:id="@+id/kontaktxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintHorizontal_bias="0.0"
+                android:textColor="@color/maroon"
+                android:textStyle="bold|italic"
+                android:layout_marginTop="8dp"
+                android:text="@string/kontaktextview"
+                app:layout_constraintStart_toStartOf="@+id/franchise_description"
+                app:layout_constraintTop_toBottomOf="@+id/franchise_description" />
+
+            <TextView
+                android:id="@+id/emailtxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/emailtextview"
+                android:textColor="@color/maroon"
+                android:textStyle="bold|italic"
+                android:paddingStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/kontaktxt"
+                app:layout_constraintStart_toEndOf="@+id/kontaktxt"
+                app:layout_constraintTop_toTopOf="@+id/kontaktxt" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:paddingTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/locfranchise">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editReview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/review"
+                    android:textColorHint="#757575" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/locfranchise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="@string/locationtxt"
+                android:paddingTop="10dp"
+                app:layout_constraintStart_toStartOf="@+id/kontaktxt"
+                app:layout_constraintTop_toBottomOf="@+id/kontaktxt" />
+
+            <TextView
+                android:id="@+id/txtags"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/yellow"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/txt_tags"
+                app:layout_constraintBottom_toBottomOf="@+id/franchisorsname_txt"
+                app:layout_constraintStart_toEndOf="@+id/franchisorsname_txt"
+                app:layout_constraintTop_toTopOf="@+id/franchisorsname_txt"
+                app:layout_constraintVertical_bias="0.1" />
+
+            <Button
+                android:id="@+id/review_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:text="@string/reviewbutton"
+                app:layout_constraintStart_toStartOf="@+id/inputLayout"
+                app:layout_constraintTop_toBottomOf="@+id/inputLayout" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</LinearLayout>

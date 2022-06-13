@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".signin.SignInActivity">
+
+    <ImageView
+        android:id="@+id/img_view"
+        android:layout_width="350dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:contentDescription="@string/imgsignin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/signin" />
+
+    <TextView
+        android:id="@+id/signintxt"
+        android:layout_width="350dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="@string/signin_tv"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_view" />
+
+    <EditText
+        android:id="@+id/editemail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/outline_box"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+        android:drawableStart="@drawable/ic_email"
+        android:hint="@string/email_sign"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toEndOf="@+id/signintxt"
+        app:layout_constraintStart_toStartOf="@+id/signintxt"
+        app:layout_constraintTop_toBottomOf="@+id/signintxt" />
+
+    <EditText
+        android:id="@+id/edit_password"
+        android:padding="16dp"
+        android:background="@drawable/outline_box"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:drawableStart="@drawable/ic_password"
+        android:hint="@string/pass_sign"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toEndOf="@+id/signintxt"
+        app:layout_constraintStart_toStartOf="@+id/signintxt"
+        app:layout_constraintTop_toBottomOf="@+id/editemail" />
+
+    <Button
+        android:id="@+id/btn_signin"
+        android:layout_width="247dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/maroon"
+        android:text="@string/signin_tv"
+        app:layout_constraintEnd_toEndOf="@+id/signintxt"
+        app:layout_constraintStart_toStartOf="@+id/signintxt"
+        app:layout_constraintTop_toBottomOf="@+id/edit_password" />
+
+    <RelativeLayout
+        android:id="@+id/view_progressbar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="0"
+        android:background="@color/transparent_maroon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
