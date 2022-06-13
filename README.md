@@ -14,3 +14,5 @@ Dependencies
 Creating a Waralobby application using the Chipmunk version of android studio.
 
 This application makes it easy for users to still earn profits during a pandemic by collaborating with franchises that have been provided by the application.
+
+use "acel" for the username and "123456" for the password to login
